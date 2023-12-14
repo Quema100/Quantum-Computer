@@ -9,12 +9,14 @@ html {
 }
 
 body {
+    background: rgb(39, 39, 39);
     margin: 0;
     width: 400vw;
     height: 200vh;
 }
 
 #menu{
+    border-radius: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
