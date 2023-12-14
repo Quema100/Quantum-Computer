@@ -4,33 +4,34 @@ html {
     -moz-user-select: none;
     -ms-use-select: none;
     user-select: none;
-    overflow-x:hidden ;
+    overflow:hidden ;
+    color: antiquewhite;
 }
 
 body {
     margin: 0;
-    width: 100vw;
-    height: 400vh;
-}
-
-body::-webkit-scrollbar {
-    width: 0px;
-}
-
-body::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 5px;
-}
-
-body::-webkit-scrollbar-thumb {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.308);
+    width: 400vw;
+    height: 200vh;
 }
 
 #menu{
+    width: 100%;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 7vh;
+    top: 0;
+}
+
+.fixed{
+    position: fixed;
+    background: aliceblue;
+}
+
+#menu > #navmenu{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 #menu > #navmenu > #divmenu {
@@ -40,13 +41,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 #menu > #navmenu > #divmenu > #ulmenu {
+    width: 320px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 #menu > #navmenu > #divmenu > #ulmenu > li {
-    width: 100px;
+    width: 93px;
     height: 100%;
     float: left;
     margin-left: 10px;
@@ -56,14 +58,18 @@ body::-webkit-scrollbar-thumb {
     font-size: 15px;
     display: flex;
     text-decoration: none;
-    align-items: center;
     transition: .3s ease-in-out;
     color: black;
     text-align: center;
+    flex-direction: column;
 }
 #menu > #navmenu > #divmenu > #ulmenu > #linav{
-    width: 40px;
+    width: 60px;
 }
+#menu > #navmenu > #divmenu > #ulmenu > #linav > a{
+    margin-right: 20px;
+}
+
 #menu > #navmenu > #divmenu > #ulmenu > li > a:hover{
     font-size: 20px;
     color: rgb(94, 94, 94);
@@ -73,22 +79,156 @@ body::-webkit-scrollbar-thumb {
     background-color: rgb(39, 39, 39);
     width: 100vw;
     height: 100vh;
+    float: left;
 }
-
+/* ----principle---- */
 #principle{
     background-color: rgb(39, 39, 39);
     width: 100vw;
+    height: 200vh;
+    float: left;
+}
+#principle > #explanation{
     height: 100vh;
+    width: 100vw;
+
 }
 
-#difference{
-    background-color: rgb(39, 39, 39);
+#principle > #explanation > #mainExplanation{
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
 }
+
+#principle > #video{
+    margin-top: 7vh;
+    width: 100vw;
+    height: 93vh;
+}
+
+#principle > #video > #videoDiv{
+    width: 100vw;
+    height: 78vh;
+}
+/* ----arrows---- */
+#arrowBox {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+#arrow{
+    position: relative;
+    top: 25%;
+    left: -1%;
+    transition: 1s ease;
+}
+
+#arrow::after {
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    content: '';
+    width: 25px; 
+    height: 25px; 
+    border-radius: 3px;
+    border-top: 4px solid #cbcbcb; 
+    border-right: 4px solid #cbcbcb; 
+    transform: rotate(135deg);
+    transition: 1s ease;
+}
+#arrow:hover{
+   animation: updown 1.5s ease infinite;
+}
+
+#videoArrowBox {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+#videoArrow{
+    position: relative;
+    top: 50%;
+    left: -1%;
+    transition: 1s ease;
+}
+
+#videoArrow::after {
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    content: '';
+    width: 25px; 
+    height: 25px; 
+    border-radius: 3px;
+    border-top: 4px solid #cbcbcb; 
+    border-right: 4px solid #cbcbcb; 
+    transform: rotate(315deg);
+    transition: 1s ease;
+}
+#videoArrow:hover{
+   animation: videoArrowdownup 1.5s ease infinite;
+}
+
+/* ----feeling---- */
 
 #feel{
     background-color: rgb(39, 39, 39);
     width: 100vw;
     height: 100vh;
+    float: left;
+}
+/* ----animation---- */
+@keyframes updown {
+    0% {
+        transform:translateY(0);
+    }
+    25%{
+        transform:translateY(25px);
+    }
+    50%{
+        transform:translateY(0);
+    }
+    75%{
+        transform:translateY(25px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+
+@keyframes videoArrowdownup {
+    0% {
+        transform:translateY(0);
+    }
+    25%{
+        transform:translateY(-25px);
+    }
+    50%{
+        transform:translateY(0);
+    }
+    75%{
+        transform:translateY(-25px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+
+@keyframes hello{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes opacity{
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
 }
