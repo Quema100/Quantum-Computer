@@ -2,6 +2,7 @@ window.onload=()=>{
     const arrow = document.getElementById("arrow")
     const videoArrow = document.getElementById("videoArrow")
     const menu = document.getElementById("menu")
+    const car = document.getElementById("car")
 
     arrow.style.opacity= 0
     videoArrow.style.opacity= 0
@@ -24,12 +25,14 @@ window.onload=()=>{
 
         arrow.addEventListener("click",()=>{
             arrow.style.animation= "opacity .5s forwards"  
-            menu.style.animation = "navup 1s forwards"    
+            menu.style.animation = "navup 1s forwards"   
+            car.style.animation = "hello .8s forwards" 
         })
     
         videoArrow.addEventListener("click",()=>{
             videoArrow.style.animation= "opacity .5s forwards" 
             menu.style.animation = "navdown 1s forwards"   
+            car.style.animation= "opacity .8s forwards"  
             setTimeout(()=>{menu.style.animation = null},1000)
         })
 

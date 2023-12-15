@@ -103,6 +103,9 @@ body {
 #principle > #video > #videoDiv{
     width: 100vw;
     height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* ----arrows---- */
 #arrowBox {
@@ -163,12 +166,12 @@ body {
     transform: rotate(315deg);
     transition: 1s ease;
 }
+
 #videoArrow:hover{
    animation: videoArrowdownup 1.5s ease infinite;
 }
 
-/* ----feeling---- */
-
+/* ----conclusion---- */
 #conclusion{
     background-color: rgb(39, 39, 39);
     width: 100vw;
