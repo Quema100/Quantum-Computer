@@ -33,7 +33,7 @@ window.onload=()=>{
             videoArrow.style.animation= "opacity .5s forwards" 
             menu.style.animation = "navdown 1s forwards"   
             car.style.animation= "opacity .8s forwards"  
-            setTimeout(()=>{menu.style.animation = null},1000)
+            setTimeout(()=>{menu.style.animation = null},999)
         })
 
     },100)
