@@ -65,12 +65,6 @@ body {
     text-align: center;
     flex-direction: column;
 }
-#menu > #navmenu > #divmenu > #ulmenu > #linav{
-    width: 60px;
-}
-#menu > #navmenu > #divmenu > #ulmenu > #linav > a{
-    margin-right: 20px;
-}
 
 #menu > #navmenu > #divmenu > #ulmenu > li > a:hover{
     font-size: 20px;
@@ -102,14 +96,13 @@ body {
 }
 
 #principle > #video{
-    margin-top: 7vh;
     width: 100vw;
-    height: 93vh;
+    height: 100vh;
 }
 
 #principle > #video > #videoDiv{
     width: 100vw;
-    height: 78vh;
+    height: 85vh;
 }
 /* ----arrows---- */
 #arrowBox {
@@ -176,13 +169,41 @@ body {
 
 /* ----feeling---- */
 
-#feel{
+#conclusion{
     background-color: rgb(39, 39, 39);
     width: 100vw;
     height: 100vh;
     float: left;
 }
 /* ----animation---- */
+@keyframes navdown{
+    from{
+        display: '';
+        transform:translateY(-7vh);
+    }
+    to{
+        transform:translateY(0);
+    }
+}
+
+@keyframes navup{
+    from {
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-7vh);
+        display:none;
+    }
+}
+
+@keyframes display {
+    from{
+        display: none;
+    }to{
+        display: none;
+    }
+}
+
 @keyframes updown {
     0% {
         transform:translateY(0);
