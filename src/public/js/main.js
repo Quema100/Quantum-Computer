@@ -3,7 +3,15 @@ window.onload=()=>{
     const videoArrow = document.getElementById("videoArrow")
     const menu = document.getElementById("menu")
     const car = document.getElementById("car")
-
+    const Quantum = document.getElementById("Quantum")
+    const Computer = document.getElementById("Computer")
+    const Outlook = document.getElementById("Outlook")
+    const QuantumRight = document.querySelector("#Quantum > #RightArrowBox > #RightArrow")
+    const ComputerRight = document.querySelector("#Computer > #RightArrowBox > #RightArrow")
+    const ComputerLeft = document.querySelector("#Computer > #LeftArrowBox > #LeftArrow")
+    const OutlookLeft = document.querySelector("#Outlook > #LeftArrowBox > #LeftArrow")
+    Computer.style.display = "none"
+    Outlook.style.display = "none"
     arrow.style.opacity= 0
     videoArrow.style.opacity= 0
 
@@ -34,6 +42,27 @@ window.onload=()=>{
             menu.style.animation = "navdown 1s forwards"   
             car.style.animation= "opacity .8s forwards"  
             setTimeout(()=>{menu.style.animation = null},999)
+        })
+
+        QuantumRight.addEventListener("click",()=>{
+            Quantum.style.display = "none"
+            Computer.style.display = null
+            console.log("Q")
+        })
+        ComputerLeft.addEventListener("click",()=>{
+            Quantum.style.display = null
+            Computer.style.display = "none"
+            console.log("CL")
+        })
+        ComputerRight.addEventListener("click",()=>{
+            Computer.style.display = "none"
+            Outlook.style.display = null
+            console.log("CR")
+        })
+        OutlookLeft.addEventListener("click",()=>{
+            Computer.style.display = null
+            Outlook.style.display = "none"
+            console.log("O")
         })
 
     },100)
