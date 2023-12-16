@@ -129,9 +129,13 @@ body {
     animation: hello 2.5s ease;
 }
 #principle > #explanation > #mainExplanation > #list > #Quantum > #Mechanics{
+    display: flex;
     margin-left: 10%;
     width: 80%;
     height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 #principle > #explanation > #mainExplanation > #list > #Computer{
     display: flex;
@@ -145,6 +149,10 @@ body {
 #principle > #explanation > #mainExplanation > #list > #Computer > #dev{
     width: 80%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #principle > #explanation > #mainExplanation > #list > #Outlook{
@@ -157,9 +165,13 @@ body {
 }
 
 #principle > #explanation > #mainExplanation > #list > #Outlook > #outlookexplanation{
+    display: flex;
     margin-right: 10%;
     width: 80%;
     height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #principle > #video{
@@ -303,6 +315,19 @@ body {
     height: 100vh;
     float: left;
 }
+
+#conclusion > #conclusionbox{
+    margin-top: 7vh;
+    height: 93vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#conclusion > #conclusionbox > #conclusionText{
+    animation: hello 2.5s ease;
+}
 /* ----animation---- */
 @keyframes navdown{
     from{
@@ -381,29 +406,5 @@ body {
         opacity: 1;
     }to{
         opacity: 0;
-    }
-}
-
-@keyframes left {
-    0%{
-
-    }
-    50%{
-
-    }
-    100%{
-
-    }
-}
-
-@keyframes right{
-    0%{
-
-    }
-    50%{
-
-    }
-    100%{
-        
     }
 }

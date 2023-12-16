@@ -16,6 +16,10 @@ window.onload=()=>{
     const ComputerRight = document.querySelector("#Computer > #RightArrowBox > #RightArrow")
     const ComputerLeft = document.querySelector("#Computer > #LeftArrowBox > #LeftArrow")
     const OutlookLeft = document.querySelector("#Outlook > #LeftArrowBox > #LeftArrow")
+    const conclusionText1 = document.getElementById("conclusionText1")
+    const conclusionText2 = document.getElementById("conclusionText2")
+    const conclusionText3 = document.getElementById("conclusionText3")
+    const conclusionText4 = document.getElementById("conclusionText4")
 
     Computer.style.display = "none"
     Outlook.style.display = "none"
@@ -52,10 +56,14 @@ window.onload=()=>{
         })
 
         home.addEventListener("click",()=>{
-            homeTexth1.style.animation = "hello 2.5s ease forwards" 
-            homeTexth3.style.animation = "hello 2.5s ease forwards" 
-            homeTexta.style.animation = "hello 2.5s ease forwards" 
+            homeTexth1.style.animation = "hello 3s ease forwards" 
+            homeTexth3.style.animation = "hello 3s ease forwards" 
+            homeTexta.style.animation = "hello 3s ease forwards" 
             Quantum.style.animation = "opacity .7s ease forwards"
+            conclusionText1.style.animation ="opacity .7s ease forwards"
+            conclusionText2.style.animation ="opacity .7s ease forwards"
+            conclusionText3.style.animation ="opacity .7s ease forwards"
+            conclusionText4.style.animation ="opacity .7s ease forwards"
             setTimeout(()=>{           
                 homeTexth1.style.animation = null
                 homeTexth3.style.animation = null 
@@ -64,10 +72,14 @@ window.onload=()=>{
         })
 
         principle.addEventListener("click",()=>{
-            Quantum.style.animation = "hello 2.5s ease forwards"
+            Quantum.style.animation = "hello 3s ease forwards"
             homeTexth1.style.animation = "opacity .7s ease forwards" 
             homeTexth3.style.animation = "opacity .7s ease forwards" 
             homeTexta.style.animation = "opacity .7s ease forwards" 
+            conclusionText1.style.animation ="opacity .7s ease forwards"
+            conclusionText2.style.animation ="opacity .7s ease forwards"
+            conclusionText3.style.animation ="opacity .7s ease forwards"
+            conclusionText4.style.animation ="opacity .7s ease forwards"
             setTimeout(() => {
                 Quantum.style.animation =null
             }, 699);
@@ -75,31 +87,45 @@ window.onload=()=>{
         })
 
         conclusion.addEventListener("click",()=>{
+            conclusionText1.style.animation ="hello 3s ease forwards"
+            conclusionText2.style.animation ="hello 3s ease forwards"
+            conclusionText3.style.animation ="hello 3s ease forwards"
+            conclusionText4.style.animation ="hello 3s ease forwards"            
             homeTexth1.style.animation = "opacity .7s ease forwards" 
             homeTexth3.style.animation = "opacity .7s ease forwards" 
             homeTexta.style.animation = "opacity .7s ease forwards" 
             Quantum.style.animation = "opacity .7s ease forwards"
+            setTimeout(() => {
+                conclusionText1.style.animation =null
+                conclusionText2.style.animation =null
+                conclusionText3.style.animation =null
+                conclusionText4.style.animation =null
+            }, 699);
         })
 
 
         QuantumRight.addEventListener("click",()=>{
             Quantum.style.display = "none"
             Computer.style.display = null
+            Computer.style.animation = "hello 2.5s ease"
             console.log("Q")
         })
         ComputerLeft.addEventListener("click",()=>{
             Quantum.style.display = null
             Computer.style.display = "none"
+            Computer.style.animation = "hello 2.5s ease"
             console.log("CL")
         })
         ComputerRight.addEventListener("click",()=>{
             Computer.style.display = "none"
             Outlook.style.display = null
+            Outlook.style.animation = "hello 2.5s ease"
             console.log("CR")
         })
         OutlookLeft.addEventListener("click",()=>{
             Computer.style.display = null
             Outlook.style.display = "none"
+            Computer.style.animation = "hello 2.5s ease"
             console.log("O")
         })
 
