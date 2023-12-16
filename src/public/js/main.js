@@ -2,14 +2,21 @@ window.onload=()=>{
     const arrow = document.getElementById("arrow")
     const videoArrow = document.getElementById("videoArrow")
     const menu = document.getElementById("menu")
-    const car = document.getElementById("car")
+    const home = document.getElementById("menuhome")
+    const principle = document.getElementById("menuprinciple")
+    const conclusion = document.getElementById("menuconclusion")
+    const homeTexth1 = document.getElementById("homeTexth1")
+    const homeTexta = document.getElementById("homeTexta")
+    const homeTexth3 = document.getElementById("homeTexth3")
     const Quantum = document.getElementById("Quantum")
     const Computer = document.getElementById("Computer")
-    const Outlook = document.getElementById("Outlook")
+    const Outlook = document.getElementById("Outlook")    
+    const videoElement = document.getElementById("videoElement")
     const QuantumRight = document.querySelector("#Quantum > #RightArrowBox > #RightArrow")
     const ComputerRight = document.querySelector("#Computer > #RightArrowBox > #RightArrow")
     const ComputerLeft = document.querySelector("#Computer > #LeftArrowBox > #LeftArrow")
     const OutlookLeft = document.querySelector("#Outlook > #LeftArrowBox > #LeftArrow")
+
     Computer.style.display = "none"
     Outlook.style.display = "none"
     arrow.style.opacity= 0
@@ -34,15 +41,46 @@ window.onload=()=>{
         arrow.addEventListener("click",()=>{
             arrow.style.animation= "opacity .5s forwards"  
             menu.style.animation = "navup 1s forwards"   
-            car.style.animation = "hello .8s forwards" 
+            videoElement.style.animation = "hello 1.5s forwards" 
         })
     
         videoArrow.addEventListener("click",()=>{
             videoArrow.style.animation= "opacity .5s forwards" 
             menu.style.animation = "navdown 1s forwards"   
-            car.style.animation= "opacity .8s forwards"  
+            videoElement.style.animation= "opacity .5s forwards"  
             setTimeout(()=>{menu.style.animation = null},999)
         })
+
+        home.addEventListener("click",()=>{
+            homeTexth1.style.animation = "hello 2.5s ease forwards" 
+            homeTexth3.style.animation = "hello 2.5s ease forwards" 
+            homeTexta.style.animation = "hello 2.5s ease forwards" 
+            Quantum.style.animation = "opacity .7s ease forwards"
+            setTimeout(()=>{           
+                homeTexth1.style.animation = null
+                homeTexth3.style.animation = null 
+                homeTexta.style.animation = null
+            },699)
+        })
+
+        principle.addEventListener("click",()=>{
+            Quantum.style.animation = "hello 2.5s ease forwards"
+            homeTexth1.style.animation = "opacity .7s ease forwards" 
+            homeTexth3.style.animation = "opacity .7s ease forwards" 
+            homeTexta.style.animation = "opacity .7s ease forwards" 
+            setTimeout(() => {
+                Quantum.style.animation =null
+            }, 699);
+
+        })
+
+        conclusion.addEventListener("click",()=>{
+            homeTexth1.style.animation = "opacity .7s ease forwards" 
+            homeTexth3.style.animation = "opacity .7s ease forwards" 
+            homeTexta.style.animation = "opacity .7s ease forwards" 
+            Quantum.style.animation = "opacity .7s ease forwards"
+        })
+
 
         QuantumRight.addEventListener("click",()=>{
             Quantum.style.display = "none"
